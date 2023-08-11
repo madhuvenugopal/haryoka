@@ -1,0 +1,204 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BTC</title>
+    <link rel="stylesheet" href="scssweb/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <div class="track">
+        <section id="header">
+            <div class="header">
+                <div class="container">
+                    <div class="nav-bar">
+                        <div class="brand">
+                            <a href="index.html">
+                                <img src="pics/btc-logo.png">
+                            </a>
+                        </div>
+
+                        <div class="nav-list">
+                            <div class="hamburger">
+                                <div class="bar"></div>
+                            </div>
+                            <ul>
+                                <li><a href="index.html#home" data-after="Home">Home</a></li>
+                                <li><a href="index.html#about" data-after="About">About</a></li>
+                                <li><a href="index.html#branches" data-after="Branches">Branches</a></li>
+                                <li><a href="index.html#contact" data-after="Contact">Contact</a></li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="hero1">
+            <div class=" container">
+                <div class="hero">
+                </div>
+            </div>
+        </section>
+
+        <main>
+            <section class="track">
+                <div class="container">
+                    <div class="yeas"><img src="pics/25years.png" alt=""></div>
+                    <div class="card w100 m_60" id="about">
+                        <div class="order">
+                            <h3>Track Your Order</h3>
+                            <p>
+                                Enter your LRNumber &amp; Tracking Code to track the status of your shipment.
+                                You can find it in the receipt you received from us upon order confirmation.
+                            </p>
+                        </div>
+                        <div class="order-track">
+                            <div class="input-box">
+                                <input type="text" id="lrnumber" name="Order-Id" placeholder="LR Number" value="SURAT1216">
+                            </div>
+                            <div class="input-box">
+                                <input type="text" id="trackingcode" name="Track-Id" placeholder="Tracking Code" value="B77CED">
+                            </div>
+                            <div class="input-btn">
+                                <input type="button" class="tracker" onclick="trackNow();" value="Track Now" style="color:#fff;" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="package1 w100" style="height:auto;">
+                        <div class="steper-header w100" style="display:none;">
+                            Consignment Status
+                        </div>
+                        <div id="trackingdata" class="w100"></div>
+                        <!--<ul class="steper-style w100">
+                            <li class="active">
+                                <p>
+                                    Order Placed
+                                    <span>July 25, 2022</span>
+                                </p>
+                            </li>
+                            <li class="active">
+                                <p>
+                                    Shipped
+                                    <span>July 29, 2022</span>
+
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    Out for delivery
+                                    <span>August 10, 2022 </span>
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    Arriving
+                                    <span>August 20, 2022</span>
+                                </p>
+                            </li>
+                        </ul>-->
+                    </div>
+                    <div class="traking"></div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <section class="footer-bg w100">
+                <div class="footer-content">
+                    <div class="footer-list w100">
+                        <ul>
+                            <li> <a href="index.html#home" data-after="Home">Home</a> </li>
+                            <li> <a href="index.html#about" data-after="About">About</a> </li>
+                            <li> <a href="index.html#branches" data-after="Branches"> Branches</a> </li>
+                            <li> <a href="index.html#contact" data-after="Contact">Contact</a> </li>
+                        </ul>
+                    </div>
+                    <div class="copyright">
+                        <p>Copyright © 2022 www.akbartravels.com All Rights Reserved.</p>
+                    </div>
+                </div>
+                
+            </section>
+        </footer>       
+    </div>
+    <script src="jsweb/app.js"></script>
+    <script>
+        function trackNow() {
+            if ($("#lrnumber").val() == "") {
+                return;
+            }
+            if ($("#trackingcode").val() == "") {
+                return;
+            }
+
+            $("#trackingdata").empty();
+            $(".steper-header").hide();
+
+            $.ajax({
+                type: "GET",
+                url: "/api/consignmentapi/track/" + $("#lrnumber").val() + "/" + $("#trackingcode").val(),
+                
+                cache: false,
+                success: function (data) {
+                    if (data != null && data.objectResult != null && data.objectResult.length > 0) {
+                        var html = "";
+                        html += '<table border="1" cellpadding="2" cellspacing="2" width="50%" style="font-size:11pt;">';
+                        html += '<thead style="font-weight:bold;">';
+                        html += '<tr style="border:solid 1px gray">';
+                        html += '<th style="text-align:left;">Station </th>';
+                        html += '<th style="text-align:left;">Status</th>';
+                        html += '<th style="text-align:left;">Timestamp </th>';
+                        html += '</tr>';
+                        html += '</thead>';
+                        html += '<tbody>';
+
+                        for (var i = 0; i < data.objectResult.length; i++) {
+                            html += '<tr style="height:35px;">';
+                            html += '<td>' + data.objectResult[i].point + '</td>';
+                            html += '<td>' + data.objectResult[i].status + '</td>';
+                            html += '<td>' + data.objectResult[i].timeStamp + '</td>';
+                            html += '</tr>';
+                        }                                
+                    
+                        html += '</tbody>';
+                        html += '</table>';
+                        html += "<br />";
+                        $("#trackingdata").append(html);
+                        $(".steper-header").show();
+                        window.scrollBy(0, 500);
+                    }
+                    else {
+                        alert("Invalid or incorrect inputs");
+                    }
+                }
+            });
+        }
+
+        function getTime(dt) {
+            var dts = dt.split("T");
+            return dts[0] + " " + dts[1].substring(0, 5);
+        }
+
+        function getMode(mod) {
+            if (mod == 1) {
+                return "Entry";
+            }
+            if (mod == 2) {
+                return "Exit";
+            }
+            return "";
+        }
+    </script>
+
+
+</body>
+
+</html>

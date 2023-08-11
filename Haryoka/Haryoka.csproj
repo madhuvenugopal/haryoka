@@ -1,0 +1,46 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+    <OutputType>Exe</OutputType>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\index.html" />
+    <None Include="wwwroot\jsweb\app.js" />
+    <None Include="wwwroot\jsweb\ejs\ejs_0.9.js" />
+    <None Include="wwwroot\jsweb\ejs\ejs_0.9.min.js" />
+    <None Include="wwwroot\jsweb\jquery-3.6.0.slim.min.js" />
+    <None Include="wwwroot\pics\25years.png" />
+    <None Include="wwwroot\pics\akbargrp.png" />
+    <None Include="wwwroot\pics\banner-sm.jpg" />
+    <None Include="wwwroot\pics\banner.jpg" />
+    <None Include="wwwroot\pics\booking-point.jpg" />
+    <None Include="wwwroot\pics\btc-logo.png" />
+    <None Include="wwwroot\pics\contact-bg.png" />
+    <None Include="wwwroot\pics\cost-saving.png" />
+    <None Include="wwwroot\pics\delivery-branches.jpg" />
+    <None Include="wwwroot\pics\fastest-shipping.png" />
+    <None Include="wwwroot\pics\inner-banner.jpg" />
+    <None Include="wwwroot\pics\location-icon.png" />
+    <None Include="wwwroot\pics\mail-icon.png" />
+    <None Include="wwwroot\pics\map1.png" />
+    <None Include="wwwroot\pics\phone-icon.png" />
+    <None Include="wwwroot\pics\safe-paking.png" />
+    <None Include="wwwroot\pics\tick.jpg" />
+    <None Include="wwwroot\pics\tick.png" />
+    <None Include="wwwroot\pics\workforce.png" />
+    <None Include="wwwroot\pics\yrs25.png" />
+    <None Include="wwwroot\scssweb\main.css" />
+    <None Include="wwwroot\scssweb\main.css.map" />
+    <None Include="wwwroot\scssweb\main.scss" />
+    <None Include="wwwroot\scssweb\variable.css" />
+    <None Include="wwwroot\scssweb\variable.css.map" />
+    <None Include="wwwroot\scssweb\variable.scss" />
+    <None Include="wwwroot\track.html" />
+  </ItemGroup>
+
+</Project>
