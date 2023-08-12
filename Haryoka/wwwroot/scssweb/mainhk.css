@@ -269,7 +269,7 @@ html {
         justify-content: center;
     }
 
-    #home .center {
+    #home .centerhk {
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
@@ -278,16 +278,14 @@ html {
         -ms-flex-direction: column;
         flex-direction: column;
         -webkit-box-pack: center;
-        -ms-flex-pack: center;
-        justify-content: center;
+        -ms-flex-pack: center;        
         -webkit-box-align: center;
-        -ms-flex-align: center;
-        /*align-items: center;*/
+        -ms-flex-align: center;        
         text-align: center;
         width: 100%;
     }
 
-        #home .center h1 {
+        #home .centerhk h1 {
             font-size: 19px;
             font-weight: 700;
             color: #ff3437;
@@ -295,14 +293,16 @@ html {
             -webkit-transition: .9s;
             transition: .9s;
             padding: 11px;
-            background-color: rgba(255, 255, 255, 0.8);
-        }   
+            background: rgba(0, 0, 0, -0.6);
+            margin-top: 125px;
+            margin-left: 380px;
+        }
 
-    #home .center h1 span {
+    #home .centerhk h1 span {
         font-size: 26px;
     }
 
-    #home .center h2 {
+    #home .centerhk h2 {
         font-size: 48px;
         font-weight: 700;
         color: #ed1c24;
@@ -314,26 +314,43 @@ html {
         border-radius: 10px;
     }
 
-        #home .center h2 span {
+        #home .centerhk h2 span {
             -webkit-animation-delay: 1.5s;
             animation-delay: 1.5s;
         }
 
-    #home .center .button-wrapper {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
-        justify-content: center;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
-        gap: 20px;
-        padding-top: 25px;
-    }
+        #home .centerhk .button-wrapper {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            gap: 20px;            
+            background: rgba(0, 0, 0, -0.6);
+            color:#fff;
+            font-size:45pt;
+        }
 
-        #home .center .button-wrapper a button {
+            #home .centerhk .button-wrapper h2 {
+                padding-top: 100px;
+                color: #fff;
+                font-size: 40pt;
+                background: rgba(0, 0, 0, -0.6);
+            }
+
+            #home .centerhk .button-wrapper h3 {
+                padding-top: 10px;
+                color: #fff;
+                font-size: 20pt;
+                align-items:flex-start;
+                background: rgba(0, 0, 0, -0.6);
+            }
+
+        #home .centerhk .button-wrapper a button {
             padding: 15px 0px;
             font-size: 17px;
             cursor: pointer;
@@ -345,14 +362,14 @@ html {
             color: #fff !important;
         }
 
-            #home .center .button-wrapper a button.locator {
+            #home .centerhk .button-wrapper a button.locator {
                 padding: 20px 26px;
                 border-radius: 5px;
                 background-image: -webkit-gradient(linear, left top, right top, from(#ed1c24), to(#9b0409));
                 background-image: linear-gradient(to right, #ed1c24, #9b0409);
             }
 
-            #home .center .button-wrapper a button.track {
+            #home .centerhk .button-wrapper a button.track {
                 padding: 13px 40px;
                 border-radius: 50px;
                 transition: all 0.1s;
@@ -363,12 +380,12 @@ html {
                 font-weight: 500;
             }
 
-                #home .center .button-wrapper a button.track:hover {
+                #home .centerhk .button-wrapper a button.track:hover {
                     background-color: #c41518;
                     color: #fff !important;
                 }
 
-                #home .center .button-wrapper a button.track:active {
+                #home .centerhk .button-wrapper a button.track:active {
                     transform: translate(0px, 5px);
                     -webkit-transform: translate(0px, 5px);
                     border-bottom: 1px solid;
@@ -1603,19 +1620,19 @@ footer .footer-bg {
         font-size: 17vw;
     }
 
-    .track #hero1 .hero .center h1 {
+    .track #hero1 .hero .centerhk h1 {
         font-size: 18px;
         -webkit-transition: .9s;
         transition: .9s;
     }
 
-    .track #hero1 .hero .center h2 {
+    .track #hero1 .hero .centerhk h2 {
         font-size: 26px;
         -webkit-transition: .9s;
         transition: .9s;
     }
 
-    .track #hero1 .hero .center .button-wrapper {
+    .track #hero1 .hero .centerhk .button-wrapper {
         -webkit-box-orient: vertical;
         -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -1623,15 +1640,15 @@ footer .footer-bg {
         width: 70% !important;
     }
 
-        .track #hero1 .hero .center .button-wrapper button {
+        .track #hero1 .hero .centerhk .button-wrapper button {
             font-size: 15px;
         }
 
-            .track #hero1 .hero .center .button-wrapper button.locator {
+            .track #hero1 .hero .centerhk .button-wrapper button.locator {
                 width: 100%;
             }
 
-        .track #hero1 .hero .center .button-wrapper buttontrack {
+        .track #hero1 .hero .centerhk .button-wrapper buttontrack {
             width: 100%;
         }
 
@@ -1655,19 +1672,19 @@ footer .footer-bg {
             padding-bottom: 0;
         }
 
-            #home .hero .center h1 {
+            #home .hero .centerhk h1 {
                 font-size: 23px;
                 -webkit-transition: .9s;
                 transition: .9s;
             }
 
-            #home .hero .center h2 {
+            #home .hero .centerhk h2 {
                 font-size: 30px;
                 -webkit-transition: .9s;
                 transition: .9s;
             }
 
-            #home .hero .center .button-wrapper {
+            #home .hero .centerhk .button-wrapper {
                 -webkit-box-orient: vertical;
                 -webkit-box-direction: normal;
                 -ms-flex-direction: column;
@@ -1675,15 +1692,15 @@ footer .footer-bg {
                 width: 70%;
             }
 
-                #home .hero .center .button-wrapper button {
+                #home .hero .centerhk .button-wrapper button {
                     font-size: 15px;
                 }
 
-                    #home .hero .center .button-wrapper button.locator {
+                    #home .hero .centerhk .button-wrapper button.locator {
                         width: 260px;
                     }
 
-                    #home .hero .center .button-wrapper button.track {
+                    #home .hero .centerhk .button-wrapper button.track {
                         width: 260px;
                         padding: 20px 0;
                     }
@@ -1968,11 +1985,11 @@ footer .footer-bg {
         font-size: 23px;
     }
 
-    #home .hero .center h1 {
+    #home .hero .centerhk h1 {
         line-height: 23px;
     }
 
-    #home .hero .center .button-wrapper {
+    #home .hero .centerhk .button-wrapper {
         width: 100%;
     }
 }

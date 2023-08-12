@@ -9,6 +9,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Remove="wwwroot\scssweb\main - Copy.css" />
+    <Content Remove="wwwroot\scssweb\main - Copy.css.map" />
+    <Content Remove="wwwroot\scssweb\mainhk.scss" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Include="wwwroot\index.html" />
     <None Include="wwwroot\jsweb\app.js" />
     <None Include="wwwroot\jsweb\ejs\ejs_0.9.js" />
@@ -34,6 +40,9 @@
     <None Include="wwwroot\pics\tick.png" />
     <None Include="wwwroot\pics\workforce.png" />
     <None Include="wwwroot\pics\yrs25.png" />
+    <None Include="wwwroot\scssweb\mainhk.css" />
+    <None Include="wwwroot\scssweb\mainhk.css.map" />
+    <None Include="wwwroot\scssweb\mainhk.scss" />
     <None Include="wwwroot\scssweb\main.css" />
     <None Include="wwwroot\scssweb\main.css.map" />
     <None Include="wwwroot\scssweb\main.scss" />
