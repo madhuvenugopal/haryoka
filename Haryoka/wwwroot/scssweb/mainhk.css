@@ -41,7 +41,7 @@ html {
     height: 100vh;
 }
 
-#header {
+#headerhk {
     position: fixed;
     z-index: 1000;
     left: 0;
@@ -50,14 +50,14 @@ html {
     height: auto;
 }
 
-    #header .header {
+    #headerhk .header {
         min-height: 90px;
         -webkit-transition: 0.3s ease background-color;
         transition: 0.3s ease background-color;
         width: 100%;
     }
 
-    #header .nav-bar {
+    #headerhk .nav-bar {
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
@@ -72,11 +72,11 @@ html {
         max-width: 1300px;
     }
 
-        #header .nav-bar .brand a img {
+        #headerhk .nav-bar .brand a img {
             width: 75%;
         }
 
-    #header .nav-list ul {
+    #headerhk .nav-list ul {
         list-style: none;
         position: absolute;
         background-color: #1f1e1e;
@@ -103,7 +103,7 @@ html {
         transition: 0.5s ease left;
     }
 
-        #header .nav-list ul a {
+        #headerhk .nav-list ul a {
             font-size: 2.5rem;
             font-weight: 500;
             letter-spacing: 0.2rem;
@@ -114,7 +114,7 @@ html {
             display: block;
         }
 
-            #header .nav-list ul a::after {
+            #headerhk .nav-list ul a::after {
                 content: attr(data-after);
                 position: absolute;
                 top: 50%;
@@ -129,21 +129,21 @@ html {
                 transition: 0.3s ease letter-spacing;
             }
 
-        #header .nav-list ul li:hover a {
+        #headerhk .nav-list ul li:hover a {
             color: crimson;
         }
 
-            #header .nav-list ul li:hover a::after {
+            #headerhk .nav-list ul li:hover a::after {
                 -webkit-transform: translate(-50%, -50%) scale(1);
                 transform: translate(-50%, -50%) scale(1);
                 letter-spacing: initial;
             }
 
-        #header .nav-list ul.active {
+        #headerhk .nav-list ul.active {
             left: 0%;
         }
 
-    #header .hamburger {
+    #headerhk .hamburger {
         height: 40px;
         width: 40px;
         display: inline-block;
@@ -166,7 +166,7 @@ html {
         margin-right: 0;
     }
 
-        #header .hamburger:after {
+        #headerhk .hamburger:after {
             position: absolute;
             content: '';
             height: 100%;
@@ -177,7 +177,7 @@ html {
             animation: hamburger_puls 1s ease infinite;
         }
 
-        #header .hamburger .bar {
+        #headerhk .hamburger .bar {
             height: 2px;
             width: 20px;
             position: relative;
@@ -185,7 +185,7 @@ html {
             z-index: -1;
         }
 
-            #header .hamburger .bar::after {
+            #headerhk .hamburger .bar::after {
                 content: '';
                 position: absolute;
                 height: 100%;
@@ -199,7 +199,7 @@ html {
                 top: 8px;
             }
 
-            #header .hamburger .bar::before {
+            #headerhk .hamburger .bar::before {
                 content: '';
                 position: absolute;
                 height: 100%;
@@ -213,24 +213,24 @@ html {
                 bottom: 8px;
             }
 
-        #header .hamburger.active {
+        #headerhk .hamburger.active {
             border: 3px solid #fff;
         }
 
-            #header .hamburger.active:after {
+            #headerhk .hamburger.active:after {
                 border: 3px solid #fff;
             }
 
-            #header .hamburger.active .bar {
+            #headerhk .hamburger.active .bar {
                 background-color: #fff;
             }
 
-                #header .hamburger.active .bar::before {
+                #headerhk .hamburger.active .bar::before {
                     bottom: 0;
                     background-color: #fff;
                 }
 
-                #header .hamburger.active .bar::after {
+                #headerhk .hamburger.active .bar::after {
                     top: 0;
                     background-color: #fff;
                 }
@@ -288,14 +288,13 @@ html {
         #home .centerhk h1 {
             font-size: 19px;
             font-weight: 700;
-            color: #ff3437;
+            color: #db7d1d;
             line-height: 40px;
             -webkit-transition: .9s;
             transition: .9s;
             padding: 11px;
             background: rgba(0, 0, 0, -0.6);
-            margin-top: 125px;
-            margin-left: 380px;
+            margin-top: 200px;
         }
 
     #home .centerhk h1 span {
@@ -328,11 +327,11 @@ html {
             justify-content: center;
             -webkit-box-align: center;
             -ms-flex-align: center;
-            align-items: center;
-            gap: 20px;            
+            align-items: center;            
+            gap: 20px;
             background: rgba(0, 0, 0, -0.6);
-            color:#fff;
-            font-size:45pt;
+            color: #fff;
+            font-size: 45pt;
         }
 
             #home .centerhk .button-wrapper h2 {
@@ -346,7 +345,7 @@ html {
                 padding-top: 10px;
                 color: #fff;
                 font-size: 20pt;
-                align-items:flex-start;
+                align-items: flex-start;
                 background: rgba(0, 0, 0, -0.6);
             }
 
@@ -1291,11 +1290,11 @@ footer .footer-bg {
 }
 
 @media screen and (min-width: 950px) {
-    #header .hamburger {
+    #headerhk .hamburger {
         display: none;
     }
 
-    #header .nav-list ul {
+    #headerhk .nav-list ul {
         position: initial;
         display: -webkit-box;
         display: -ms-flexbox;
@@ -1311,7 +1310,7 @@ footer .footer-bg {
         background-color: transparent;
     }
 
-        #header .nav-list ul li {
+        #headerhk .nav-list ul li {
             display: -webkit-box;
             display: -ms-flexbox;
             display: flex;
@@ -1321,7 +1320,7 @@ footer .footer-bg {
             height: 90px;
         }
 
-            #header .nav-list ul li.active {
+            #headerhk .nav-list ul li.active {
                 background-color: #ed1c24;
                 color: #fff;
                 -webkit-transition: .3s;
@@ -1332,7 +1331,7 @@ footer .footer-bg {
                 position: relative;
             }
 
-                #header .nav-list ul li.active::after {
+                #headerhk .nav-list ul li.active::after {
                     content: '';
                     width: 100%;
                     height: 5px;
@@ -1342,17 +1341,17 @@ footer .footer-bg {
                     left: 0;
                 }
 
-                #header .nav-list ul li.active a {
+                #headerhk .nav-list ul li.active a {
                     text-decoration: none;
                     color: #fff;
                 }
 
-            #header .nav-list ul li:hover {
+            #headerhk .nav-list ul li:hover {
                 background-color: #ed1c24;
                 position: relative;
             }
 
-                #header .nav-list ul li:hover::after {
+                #headerhk .nav-list ul li:hover::after {
                     content: '';
                     width: 100%;
                     height: 5px;
@@ -1362,26 +1361,26 @@ footer .footer-bg {
                     left: 0;
                 }
 
-                #header .nav-list ul li:hover a {
+                #headerhk .nav-list ul li:hover a {
                     text-decoration: none;
                     color: #fff;
                     -webkit-transition: .5s;
                     transition: .5s;
                 }
 
-            #header .nav-list ul li a {
+            #headerhk .nav-list ul li a {
                 font-size: 19px;
                 font-weight: 700;
-                color: #bedd11;
+                color: red;
             }
 
-        #header .nav-list ul a:after {
+        #headerhk .nav-list ul a:after {
             display: none;
         }
 }
 
 @media screen and (max-width: 950px) {
-    #header .nav-bar {
+    #headerhk .nav-bar {
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
@@ -1390,7 +1389,7 @@ footer .footer-bg {
         align-items: center;
     }
 
-        #header .nav-bar .brand a img {
+        #headerhk .nav-bar .brand a img {
             width: 75%;
         }
 }
@@ -1616,7 +1615,7 @@ footer .footer-bg {
 }
 
 @media screen and (max-width: 768px) {
-    #header .nav-list ul a::after {
+    #headerhk .nav-list ul a::after {
         font-size: 17vw;
     }
 
@@ -1890,7 +1889,7 @@ footer .footer-bg {
 }
 
 @media screen and (max-width: 550px) {
-    #header .header {
+    #headerhk .header {
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;

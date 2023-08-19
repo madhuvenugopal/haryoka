@@ -29,11 +29,11 @@
                         </div>
 
                         <ul class="nav-item">
-                            <li id="selectedpage"><a href="#" data-after="Home">Home</a></li>
+                            <li><a href="index.html" data-after="Home">Home</a></li>
                             <li><a href="about-us.html" data-after="About">About Us</a></li>
                             <li><a href="technologies.html" data-after="Technologies">Technologies</a></li>
                             <li><a href="sustainability.html" data-after="Sustainability">Sustainability</a></li>
-                            <li><a href="blogs.php" data-after="Blogs">Blogs</a></li>
+                            <li id="selectedpage"><a href="#" data-after="Blogs">Blogs</a></li>
                         </ul>
 
                     </div>
@@ -121,11 +121,11 @@
             <div class="footer-content">
                 <div class="footer-list w100">
                     <ul>
-                        <li><a href="#" data-after="Home">Home</a></li>
+                        <li><a href="index.html" data-after="Home">Home</a></li>
                         <li><a href="about-us.html" data-after="About">About Us</a></li>
                         <li><a href="technologies.html" data-after="Technologies">Technologies</a></li>
                         <li><a href="sustainability.html" data-after="Sustainability">Sustainability</a></li>
-                        <li><a href="blogs.php" data-after="Blogs">Blogs</a></li>
+                        <li><a href="#" data-after="Blogs">Blogs</a></li>
                     </ul>
                 </div>
                 <div class="copyright">
@@ -143,3 +143,11 @@
 </body>
 
 </html>
+<?php
+$myfile = fopen("newfile.txt", "w") or die("Unable to open file!");
+$txt = "John Doe\n";
+fwrite($myfile, $txt);
+$txt = "Jane Doe\n";
+fwrite($myfile, $txt);
+fclose($myfile);
+?>

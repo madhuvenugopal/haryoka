@@ -1305,7 +1305,7 @@ footer .footer-bg {
         }
 
             #header .nav-list ul li.active {
-                background-color: #ed1c24;
+                background-color: #0f820f;
                 color: #fff;
                 -webkit-transition: .3s;
                 transition: .3s;
@@ -1328,21 +1328,24 @@ footer .footer-bg {
                 #header .nav-list ul li.active a {
                     text-decoration: none;
                     color: #fff;
+                    text-decoration: none;
                 }
 
             #header .nav-list ul li:hover {
-                background-color: #ed1c24;
+                background-color: #db7d1d;
                 position: relative;
+                text-decoration: none;
             }
 
                 #header .nav-list ul li:hover::after {
                     content: '';
                     width: 100%;
                     height: 5px;
-                    background-color: #db7d1d;
+                    background-color: #0f820f;
                     position: absolute;
                     bottom: 0;
                     left: 0;
+                    text-decoration: none;
                 }
 
                 #header .nav-list ul li:hover a {
@@ -1355,7 +1358,8 @@ footer .footer-bg {
             #header .nav-list ul li a {
                 font-size: 19px;
                 font-weight: 700;
-                color: #bedd11;
+                color: #0f820f;
+                text-shadow: 0.3px 1.3px yellow;
             }
 
         #header .nav-list ul a:after {

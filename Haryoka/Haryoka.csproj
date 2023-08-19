@@ -9,12 +9,22 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Remove="wwwroot\about-us.html" />
+    <Content Remove="wwwroot\blogs.php" />
+    <Content Remove="wwwroot\indexORIG.html" />
     <Content Remove="wwwroot\scssweb\main - Copy.css" />
     <Content Remove="wwwroot\scssweb\main - Copy.css.map" />
     <Content Remove="wwwroot\scssweb\mainhk.scss" />
+    <Content Remove="wwwroot\sustainability.html" />
+    <Content Remove="wwwroot\technologies.html" />
   </ItemGroup>
 
   <ItemGroup>
+    <None Include="wwwroot\blogs.php" />
+    <None Include="wwwroot\sustainability.html" />
+    <None Include="wwwroot\technologies.html" />
+    <None Include="wwwroot\indexORIG.html" />
+    <None Include="wwwroot\about-us.html" />
     <None Include="wwwroot\index.html" />
     <None Include="wwwroot\jsweb\app.js" />
     <None Include="wwwroot\jsweb\ejs\ejs_0.9.js" />
@@ -25,7 +35,7 @@
     <None Include="wwwroot\pics\banner-sm.jpg" />
     <None Include="wwwroot\pics\banner.jpg" />
     <None Include="wwwroot\pics\booking-point.jpg" />
-    <None Include="wwwroot\pics\btc-logo.png" />
+    <None Include="wwwroot\pics\hms-logo.png" />
     <None Include="wwwroot\pics\contact-bg.png" />
     <None Include="wwwroot\pics\cost-saving.png" />
     <None Include="wwwroot\pics\delivery-branches.jpg" />
