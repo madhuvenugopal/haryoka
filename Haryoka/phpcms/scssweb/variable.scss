@@ -1,0 +1,43 @@
+$font:'Roboto Condensed', sans-serif !important;
+
+$w100: 100%;
+
+$light: 300;
+$regular: 400;
+$bold: 700;
+
+$white: #fff;
+$gry: #f5f7fb;
+$blackClr: #000;
+$hdClr: #bc1559;
+$bgclr: #df3e81;
+$txtClr: #525252;
+$txtgrn: #5f991f;
+$txtred : #ed1c24;
+
+@mixin bdr {
+  border: 1px solid #dfdfe0;
+}
+@mixin sidebdr {
+  border: 1px solid #e0e0e0;
+}
+@mixin flex {
+  display: flex;
+}
+@mixin column {
+  flex-direction: column;
+}
+@mixin row {  
+    flex-direction: row; 
+  }
+@mixin shadow {
+  background: #fff;
+  border-radius: 7px;
+  // box-shadow: 0 0 5px 0 rgb(0, 0, 0, 10%);
+  padding: 20px;
+  border: 1px solid rgba(156, 170, 179, 0.28);
+
+  box-shadow: 0px 0px 5px 4px rgba(0, 0, 0, 0.04);
+  -webkit-box-shadow: 0px 0px 5px 4px rgba(0, 0, 0, 0.04);
+  -moz-box-shadow: 0px 0px 5px 4px rgba(0, 0, 0, 0.04);
+}
