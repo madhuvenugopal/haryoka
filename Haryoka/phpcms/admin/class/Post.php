@@ -5,6 +5,14 @@ class Post {
 	private $categoryTable = 'cms_category';
 	private $userTable = 'cms_user';	
 	private $conn;
+	public $id;
+	public $title;
+	public $message;
+	public $category;
+	public $userid;
+	public $status;
+	public $created;
+	public $updated;
 	
 	public function __construct($db){
         $this->conn = $db;
@@ -182,6 +190,6 @@ class Post {
 		$stmt->execute();
 		$result = $stmt->get_result();
 		return $result->num_rows;	
-	}	
+	}
 }
 ?>

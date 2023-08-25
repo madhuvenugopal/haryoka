@@ -36,7 +36,7 @@ include('inc/header.php');
 			<div class="col-md-10 blogShort">
 			<h3><a href="view.php?id=<?php echo $post['id']; ?>"><?php echo $post['title']; ?></a></h3>		
 			<em><strong>Published on</strong>: <?php echo date_format($date, "d F Y");	?></em>
-			<em><strong>Category:</strong> <a href="#" target="_blank"><?php echo $post['category']; ?></a></em>
+			<em style="visibility:hidden"><strong>Category:</strong> <a href="#" target="_blank"><?php echo $post['category']; ?></a></em>
 			<br><br>
 			<article>		
 			<p><?php echo $message; ?> 	</p>

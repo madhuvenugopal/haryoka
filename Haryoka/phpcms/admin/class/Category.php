@@ -3,15 +3,16 @@ class Category {
 	
 	private $categoryTable = 'cms_category';	
 	private $conn;
-	
+	public $id;
+	public $name;
+
 	public function __construct($db){
         $this->conn = $db;
     }	
 	
 	public function getCategoryListing(){	
 		
-		$sqlQuery = "
-			SELECT id, name
+		$sqlQuery = "SELECT id, name 
 			FROM ".$this->categoryTable."  
 			 ";
 		
@@ -27,7 +28,7 @@ class Category {
 		if($_POST["length"] != -1){
 			$sqlQuery .= 'LIMIT ' . $_POST['start'] . ', ' . $_POST['length'];
 		}
-
+		
 		$stmt = $this->conn->prepare($sqlQuery);
 		$stmt->execute();
 		$result = $stmt->get_result();	
@@ -42,7 +43,7 @@ class Category {
 		
 		while ($category = $result->fetch_assoc()) { 				
 			$rows = array();				
-			$rows[] = $category['id'];
+			//$rows[] = $category['id'];
 			$rows[] = $category['name'];					
 			$rows[] = '<a href="add_categories.php?id='.$category["id"].'" class="btn btn-warning btn-xs update">Edit</a>';
 			$rows[] = '<button type="button" name="delete" id="'.$category["id"].'" class="btn btn-danger btn-xs delete" >Delete</button>';
@@ -56,7 +57,7 @@ class Category {
 			"data"	=> 	$categories
 		);
 		
-		//echo json_encode($output);	
+		echo json_encode($output);	
 	}
 	
 	public function getCategory(){		

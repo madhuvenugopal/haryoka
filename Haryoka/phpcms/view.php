@@ -35,7 +35,7 @@ include_once('inc/header.php');
 			<div class="col-md-10 blogShort">
 			<h2><?php echo $post['title']; ?></h2>
 			<em><strong>Published on</strong>: <?php echo date_format($date, "d F Y");	?></em>
-			<em><strong>Category:</strong> <a href="#" target="_blank"><?php echo $post['category']; ?></a></em>
+			<em style="visibility:hidden"><strong>Category:</strong> <a href="#" target="_blank"><?php echo $post['category']; ?></a></em>
 			<br><br>
 			<article>
 				<p><?php echo $message; ?> 	</p>

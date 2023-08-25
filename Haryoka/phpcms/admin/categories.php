@@ -14,7 +14,6 @@ if(!$user->loggedIn()) {
 	header("location: index.php");
 }
 
-
 include('inc/header.php');
 ?>
 <script src="js/jquery.dataTables.min.js"></script>
@@ -30,7 +29,7 @@ include('inc/header.php');
 	<div class="container">
 		<div class="row">
 			<div class="col-md-10">
-				<h1><span class="glyphicon glyphicon-cog" aria-hidden="true"></span> Dashboard <small>Manage Your Site</small></h1>
+				<h1><span class="glyphicon glyphicon-cog" aria-hidden="true"></span> Dashboard <small>Manage Haryoka</small></h1>
 			</div>
 			<br>			
 		</div>
@@ -53,7 +52,7 @@ include('inc/header.php');
 								<div class="col-md-10">
 									<h3 class="panel-title"></h3>
 								</div>
-								<div class="col-md-2" align="right">
+								<div class="col-md-2" style="text-align:right;">
 									<a href="add_categories.php" class="btn btn-default btn-xs">Add New</a>				
 								</div>
 							</div>
@@ -61,7 +60,7 @@ include('inc/header.php');
 						<table id="categoryList" class="table table-bordered table-striped">
 							<thead>
 								<tr>
-									<th>Id</th>									
+									<!--<th>Id</th-->
 									<th>Category</th>																								
 									<th></th>
 									<th></th>	

@@ -409,7 +409,7 @@ main .intro-content .intro {
         main .intro-content .intro .leftaboutus {
             width: 99%;
             margin-top: -700px;
-            z-index: 1000;
+            z-index: 1;
             color:#fff;
             font-size: 13pt;
         }
@@ -426,7 +426,7 @@ main .intro-content .intro {
             main .intro-content .intro .lefttechnology {
                 width: 99%;
                 margin-top: -700px;
-                z-index: 1000;
+                z-index: 1;
                 color:#fff;
                 font-size: 13pt;
             }

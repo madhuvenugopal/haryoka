@@ -8,15 +8,15 @@ $(document).ready(function(){
 			url:"manage_categories.php",
 			type:"POST",
 			data:{action:'categoryListing'},
-			dataType:"json"
+			dataType:"json",			
 		},
 		"columnDefs":[
 			{
-				"targets":[0, 2, 3],
+				"targets":[0, 1, 2],
 				"orderable":false,
 			},
 		],
-		"pageLength": 10
+		"pageLength": 20
 	});		
 	$(document).on('click', '.delete', function(){
 		var categoryId = $(this).attr("id");		

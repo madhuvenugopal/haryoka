@@ -16,7 +16,7 @@ $(document).ready(function(){
 				"orderable":false,
 			},
 		],
-		"pageLength": 10
+		"pageLength": 20
 	});		
 	$(document).on('click', '.delete', function(){
 		var postId = $(this).attr("id");		

@@ -36,7 +36,7 @@ include('inc/header.php');
 					<span class="caret"></span></button>
 					<ul class="dropdown-menu">						
 						<li><a href="#">Add Post</a></li>
-						<li><a href="#">Add Category</a></li>
+						<li style="display:none;"><a href="#">Add Category</a></li>
 					</ul>
 				</div> 
 			</div>
@@ -65,7 +65,7 @@ include('inc/header.php');
        <h4>Users</h4>
      </div>
    </div>
-   <div class="col-md-3">
+   <div class="col-md-3" style="display:none;">
      <div class="well dash-box">
        <h2><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span> <?php echo $category->totalCategory(); ?></h2>
        <h4>Categories</h4>

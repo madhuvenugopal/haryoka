@@ -18,8 +18,15 @@ if(!$user->loggedIn()) {
 
 $category = new Category($db);
 
-$category->id = (isset($_GET['id']) && $_GET['id']) ? $_GET['id'] : '0';
+$categoryDetails = array(
+	'id' => 0, 
+	'name' => ""
+);
 
+try{
+
+$category->id = (isset($_GET['id']) && $_GET['id']) ? $_GET['id'] : '0';
+//echo implode(",",$category); 
 $saveMessage = '';
 if(!empty($_POST["categorySave"]) && $_POST["categoryName"]!='') {
 	
@@ -35,9 +42,19 @@ if(!empty($_POST["categorySave"]) && $_POST["categoryName"]!='') {
 			$saveMessage = "Category saved successfully!";
 		}
 	}
+
+	$categoryDetails = $category->getCategory();
+	if($categoryDetails == null){				
+		$categoryDetails = array(
+			'id' => 0, 
+			'name' => ""
+		);
+	}
+}
+}catch(Exception $e) {
+	echo 'Message: ' .$e->getMessage();
 }
 
-$categoryDetails = $category->getCategory();
  
 include('inc/header.php');
 ?>

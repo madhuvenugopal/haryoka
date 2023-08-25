@@ -413,7 +413,7 @@ main .intro-content .intro {
         width: 45%;
         margin-top: -335px;
         color: #fff;
-        z-index: 1000;
+        z-index: 1;
     }
 
         main .intro-content .intro .left img {

@@ -18,34 +18,64 @@ if(!$user->loggedIn()) {
 
 $post = new Post($db);
 
+$postdetails = array(
+	'id' => 0, 
+	'title' => "", 
+	'message' => "", 
+	'category_id' => 1, 
+	'userid' => 1, 
+	'status' => "", 
+	'created' => date('Y-m-d H:i:s'), 
+	'updated' => date('Y-m-d H:i:s')  
+);
+
 $categories = $post->getCategories();
 
-$post->id = (isset($_GET['id']) && $_GET['id']) ? $_GET['id'] : '0';
-$saveMessage = '';
-if(!empty($_POST["savePost"]) && $_POST["title"]!=''&& $_POST["message"]!='') {
-	
-	$post->title = $_POST["title"];
-	$post->message = $_POST["message"];
-	$post->category = $_POST["category"];
-	$post->status = $_POST["status"];	 	
-	if($post->id) {	
-		$post->updated = date('Y-m-d H:i:s');
-		if($post->update()) {
-			$saveMessage = "Post updated successfully!";
-		}
-	} else {
-		$post->userid = $_SESSION["userid"];
-		$post->created = date('Y-m-d H:i:s'); 
-		$post->updated = date('Y-m-d H:i:s'); 	
-		$lastInserId = $post->insert();
-		if($lastInserId) {
-			$post->id = $lastInserId;
-			$saveMessage = "Post saved successfully!";
+echo $categories == null;
+
+try{
+	$post->id = (isset($_GET['id']) && $_GET['id']) ? $_GET['id'] : '0';
+	$saveMessage = '';
+	if(!empty($_POST["savePost"]) && $_POST["title"]!=''&& $_POST["message"]!='') {
+		
+		$post->title = $_POST["title"];
+		$post->message = $_POST["message"];
+		$post->category = $_POST["category"];
+		$post->status = $_POST["status"];	 	
+		if($post->id) {	
+			$post->updated = date('Y-m-d H:i:s');
+			if($post->update()) {
+				$saveMessage = "Post updated successfully!";
+			}
+		} else {
+			$post->userid = $_SESSION["userid"];
+			$post->created = date('Y-m-d H:i:s'); 
+			$post->updated = date('Y-m-d H:i:s'); 	
+			$lastInserId = $post->insert();
+			if($lastInserId) {
+				$post->id = $lastInserId;
+				$saveMessage = "Post saved successfully!";
+			}
 		}
 	}
-}
 
-$postdetails = $post->getPost();
+	$postdetails = $post->getPost();
+	if($postdetails == null){				
+		$postdetails = array(
+			'id' => 0, 
+			'title' => "", 
+			'message' => "", 
+			'category' => 1, 
+			'userid' => 1, 
+			'status' => "", 
+			'created' => date('Y-m-d H:i:s'), 
+			'updated' => date('Y-m-d H:i:s')  
+		);
+	}
+
+}catch(Exception $e) {
+	echo 'Message: ' .$e->getMessage();
+}
  
 include('inc/header.php');
 ?>
@@ -71,7 +101,7 @@ include('inc/header.php');
 <section id="main">
 	<div class="container">
 		<div class="row">	
-			<?php include "left_menus.php"; ?>
+			<?php include_once "left_menus.php"; ?>
 			<div class="col-md-9">
 				<div class="panel panel-default">
 				  <div class="panel-heading">
@@ -85,7 +115,7 @@ include('inc/header.php');
 						<?php } ?>
 						<div class="form-group">
 							<label for="title" class="control-label">Title</label>
-							<input type="text" class="form-control" id="title" name="title" value="<?php echo $postdetails['title']; ?>" placeholder="Post title..">							
+							<input type="text" class="form-control" id="title" name="title" value="<?php echo $postdetails['title']; ?>" placeholder="Post title..">
 						</div>
 						
 						<div class="form-group">
