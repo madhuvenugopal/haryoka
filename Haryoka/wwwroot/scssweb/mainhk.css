@@ -397,7 +397,7 @@ main .intro-content .yeas {
 }
 
 main .intro-content .intro {
-    padding: 60px 0 30px;
+    padding: 10px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -411,6 +411,9 @@ main .intro-content .intro {
 
     main .intro-content .intro .left {
         width: 45%;
+        margin-top: -335px;
+        color: #fff;
+        z-index: 1;
     }
 
         main .intro-content .intro .left img {
@@ -880,6 +883,7 @@ footer .contact .contact-details {
     height: 390px;
     -webkit-transition: .3s;
     transition: .3s;
+    margin-top: -60px;
 }
 
     footer .contact .contact-details .support {
@@ -1334,8 +1338,7 @@ footer .footer-bg {
                 #headerhk .nav-list ul li.active::after {
                     content: '';
                     width: 100%;
-                    height: 5px;
-                    background-color: #db7d1d;
+                    height: 5px;                    
                     position: absolute;
                     bottom: 0;
                     left: 0;
@@ -1354,8 +1357,7 @@ footer .footer-bg {
                 #headerhk .nav-list ul li:hover::after {
                     content: '';
                     width: 100%;
-                    height: 5px;
-                    background-color: #db7d1d;
+                    height: 5px;                    
                     position: absolute;
                     bottom: 0;
                     left: 0;

@@ -783,6 +783,7 @@ html {
                 background-position: left;
                 height: 390px;
                 transition: .3s;
+                margin-top: -60px;
 
                 .support {
                     @include flex;

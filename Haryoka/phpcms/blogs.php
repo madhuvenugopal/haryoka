@@ -14,7 +14,7 @@ include('inc/header.php');
 
 ?>
 <title>haryoka: blog</title>
-<link href="css/style.css" rel="stylesheet" id="bootstrap-css">
+<link href="css/style.css<?php preventScriptStyleCache() ?>" rel="stylesheet" id="bootstrap-css">
 
 <?php include('inc/container.php');?>
 <div class="container">	

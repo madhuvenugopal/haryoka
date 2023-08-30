@@ -18,7 +18,7 @@ if(!$user->loggedIn()) {
 
 include('inc/header.php');
 ?>
-<link href="css/style.css" rel="stylesheet" type="text/css" >  
+<link href="css/style.css<?php preventScriptStyleCache() ?>" rel="stylesheet" type="text/css" >  
 </head>
 <body>
 <?php include "menus.php"; ?>
@@ -65,7 +65,7 @@ include('inc/header.php');
        <h4>Users</h4>
      </div>
    </div>
-   <div class="col-md-3" style="display:none;">
+   <div class="col-md-3">
      <div class="well dash-box">
        <h2><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span> <?php echo $category->totalCategory(); ?></h2>
        <h4>Categories</h4>

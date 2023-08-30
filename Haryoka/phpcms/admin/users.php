@@ -18,11 +18,11 @@ if(!$user->loggedIn()) {
 
 include('inc/header.php');
 ?>
-<script src="js/jquery.dataTables.min.js"></script>
-<script src="js/dataTables.bootstrap.min.js"></script>		
-<link rel="stylesheet" href="css/dataTables.bootstrap.min.css" />
-<script src="js/users.js"></script>	
-<link href="css/style.css" rel="stylesheet" type="text/css" >  
+<script src="js/jquery.dataTables.min.js<?php preventScriptStyleCache() ?>"></script>
+<script src="js/dataTables.bootstrap.min.js<?php preventScriptStyleCache() ?>"></script>		
+<link rel="stylesheet" href="css/dataTables.bootstrap.min.css<?php preventScriptStyleCache() ?>" />
+<script src="js/users.js<?php preventScriptStyleCache() ?>"></script>	
+<link href="css/style.css<?php preventScriptStyleCache() ?>" rel="stylesheet" type="text/css" >  
 </head>
 <body>
 <?php include "menus.php"; ?>

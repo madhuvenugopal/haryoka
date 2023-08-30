@@ -406,6 +406,61 @@ main .intro-content .intro {
             width: 100%;
         }
 
+        main .intro-content .intro .leftaboutus {
+            width: 99%;
+            margin-top: -700px;
+            z-index: 1;
+            color:#fff;
+            font-size: 13pt;
+        }
+    
+            main .intro-content .intro .leftaboutus img {
+                -webkit-transition: .9s;
+                transition: .9s;
+            }
+    
+            main .intro-content .intro .leftaboutus img {
+                width: 100%;
+            }
+    
+            main .intro-content .intro .lefttechnology {
+                width: 99%;
+                margin-top: -700px;
+                z-index: 1;
+                color:#fff;
+                font-size: 13pt;
+            }
+
+            main .intro-content .intro .lefttechnology .divtile {
+                width:32.5%; 
+                float: left; 
+                text-align: center; 
+                margin-left:5px; 
+                margin-right:5px;                 
+                border-radius: 10px;
+                background: #fff; 
+                color:#000;
+                min-height: 255px;
+                padding: 5px;
+            }
+
+            main .intro-content .intro .lefttechnology .divtile img {
+                width: 40%;
+            }
+
+            main .intro-content .intro .lefttechnology .divtile div {
+                padding: 5px;
+            }
+        
+                main .intro-content .intro .lefttechnology img {
+                    -webkit-transition: .9s;
+                    transition: .9s;
+                }
+        
+                main .intro-content .intro .lefttechnology img {
+                    width: 100%;
+                }
+            
     main .intro-content .intro .right {
         width: 50%;
         display: -webkit-box;
@@ -1331,8 +1386,7 @@ footer .footer-bg {
                     text-decoration: none;
                 }
 
-            #header .nav-list ul li:hover {
-                background-color: #db7d1d;
+            #header .nav-list ul li:hover {                
                 position: relative;
                 text-decoration: none;
             }
