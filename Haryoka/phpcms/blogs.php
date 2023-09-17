@@ -22,9 +22,9 @@ include('inc/header.php');
 			<div class="header">
 			<a href="#default" class="logo">haryoka: blog</a>
 			<div class="header-right">
-				<a href="index.html">Home</a>
-				<a href="index.html#contact">Contact</a>
-				<a href="about-us.html">About</a>
+				<a href="index.php">Home</a>
+				<a href="index.php#contact">Contact</a>
+				<a href="about-us.php">About</a>
 			</div>
 		</div>	
 		<?php

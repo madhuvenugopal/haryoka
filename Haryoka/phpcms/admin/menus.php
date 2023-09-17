@@ -11,11 +11,11 @@
 	</div>
 	<div id="navbar" class="collapse navbar-collapse">
 	  <ul class="nav navbar-nav">
-		<li class="active"><a href="index.html" style="color:#fff;">Dashboard</a></li>		
+		<li class="active"><a href="index.php" style="color:#fff;">Dashboard</a></li>		
 	  </ul>
 	  <?php if(!empty($_SESSION["userid"])) { ?>
 	  <ul class="nav navbar-nav navbar-right">
-		<li class="active"><a href="index.html" style="color:#fff;">Welcome, <?php echo $_SESSION["name"]; ?></a></li>
+		<li class="active"><a href="index.php" style="color:#fff;">Welcome, <?php echo $_SESSION["name"]; ?></a></li>
 		<li><a href="logout.php">Logout</a></li>          
 	  </ul>
 	  <?php } ?>
